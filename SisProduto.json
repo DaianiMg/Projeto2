@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "e2cdc60b-505c-4d02-86e7-0905915dd174",
+		"name": "SisProdutos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CadastroUsuario",
+			"item": [
+				{
+					"name": "https://localhost:5001/Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/Logout",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"Logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:5001/Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Carol\",\r\n  \"password\": \"9326Dai#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/Login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:5001/cadastro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Carol\",\r\n  \"email\": \"carol@gmail.com\",\r\n  \"password\": \"9326Dai#\",\r\n  \"rePassword\": \"9326Dai#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/cadastro",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"cadastro"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "GetPorFiltro",
+					"item": [
+						{
+							"name": "Lista Todos os Produtos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://localhost:5001/Produtos",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"Produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Lista por descricao",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/Produtos/descricao/Samsung?descricao=Samsung",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"Produtos",
+										"descricao",
+										"Samsung"
+									],
+									"query": [
+										{
+											"key": "descricao",
+											"value": "Samsung"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CriarProduto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Celular\",\r\n  \"descricao\": \"LG\",\r\n  \"preco\": 1500.00,\r\n  \"palavra_Chave\": \"Celular\",\r\n  \"categoria\": \"Tecnologia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/Produtos",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"Produtos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
